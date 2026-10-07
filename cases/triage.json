@@ -1,0 +1,11 @@
+[
+  {"id": "sql-error", "report": "The search box accepts SQL fragments and returns raw database errors.", "security": true, "known_failure": "llama3.2:3b returns is_security_issue=false for SQL injection (2026-10-07, temp 0.0)"},  {"id": "no-auth-admin", "report": "Admin API endpoints respond without any authentication token.", "security": true},
+  {"id": "reset-link-reuse", "report": "Password reset links never expire and can be reused.", "security": true},
+  {"id": "cookie-flag", "report": "The session cookie lacks the Secure flag on the login page.", "security": true},
+  {"id": "xss-filename", "report": "Uploaded filenames are rendered without escaping, allowing script injection.", "security": true},
+  {"id": "button-misaligned", "report": "The Save button is misaligned by 2 pixels on mobile Safari.", "security": false},
+  {"id": "footer-typo", "report": "Typo in the footer: 'Privicy Policy'.", "security": false},
+  {"id": "datepicker-resize", "report": "The date picker closes when the window is resized.", "security": false},
+  {"id": "spinner-stuck", "report": "The loading spinner keeps animating after the page has loaded.", "security": false},
+  {"id": "slow-images", "report": "Product images load slowly on 3G connections.", "security": false}
+]

@@ -1,0 +1,12 @@
+[
+  {"id": "add", "prompt": "What is 3 + 5? Answer with just the number.", "expected": "8"},
+  {"id": "multiply", "prompt": "What is 6 times 7? Answer with just the number.", "expected": "42"},
+  {"id": "days-week", "prompt": "How many days are in a week? Answer with just the number.", "expected": "7"},
+  {"id": "capital-italy", "prompt": "What is the capital of Italy? One word.", "expected": "rome"},
+  {"id": "capital-egypt", "prompt": "What is the capital of Egypt? One word.", "expected": "cairo"},
+  {"id": "capital-pakistan", "prompt": "What is the capital of Pakistan? One word.", "expected": "islamabad"},
+  {"id": "symbol-gold", "prompt": "What is the chemical symbol for gold? Answer with just the symbol.", "expected": "au"},
+  {"id": "opposite-hot", "prompt": "What is the opposite of 'hot'? One word.", "expected": "cold"},
+  {"id": "red-planet", "prompt": "Which planet is known as the Red Planet? One word.", "expected": "mars"},
+  {"id": "largest-ocean", "prompt": "What is the largest ocean on Earth? One word.", "expected": "pacific"}
+]
