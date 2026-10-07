@@ -38,7 +38,8 @@ def test_fact(case):
 
 
 @pytest.mark.parametrize("case", params(TRIAGE))
-def test_triage_security_flag(case):
+def test_triage_expected(case):
     prompt = f"Triage this bug report. Reply with JSON only.\nBug report: {case['report']}"
     result = ask_structured(prompt, BugTriage)
-    assert result.is_security_issue is case["security"]
+    for field, value in case["expected"].items():
+        assert getattr(result, field) == value, field
