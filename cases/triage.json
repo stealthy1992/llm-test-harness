@@ -1,5 +1,5 @@
 [
-  {"id": "sql-error", "report": "The search box accepts SQL fragments and returns raw database errors.", "known_failure": "llama3.2:3b returns is_security_issue=false for SQL injection (2026-10-07, temp 0.0)", "expected": {"is_security_issue": true}},
+  {"id": "sql-error", "report": "The search box accepts SQL fragments and returns raw database errors.", "known_failure": {"llama3.2:3b": "llama3.2:3b returns is_security_issue=false for SQL injection (2026-10-07, temp 0.0)"}, "expected": {"is_security_issue": true}},
   {"id": "no-auth-admin", "report": "Admin API endpoints respond without any authentication token.", "expected": {"is_security_issue": true}},
   {"id": "reset-link-reuse", "report": "Password reset links never expire and can be reused.", "expected": {"is_security_issue": true}},
   {"id": "cookie-flag", "report": "The session cookie lacks the Secure flag on the login page.", "expected": {"is_security_issue": true}},

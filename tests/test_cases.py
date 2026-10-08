@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from llm_client import ask, ask_structured, normalize
+from llm_client import ask, ask_structured, normalize, MODEL
 from schemas import BugTriage
 
 CASES_DIR = Path(__file__).parent.parent / "cases"
@@ -24,13 +24,12 @@ def params(cases):
         pytest.param(
             c,
             id=c["id"],
-            marks=pytest.mark.xfail(reason=c["known_failure"], strict=True)
-            if "known_failure" in c
+            marks=pytest.mark.xfail(reason=c["known_failure"][MODEL], strict=True)
+            if MODEL in c.get("known_failure", {})
             else (),
         )
         for c in cases
     ]
-
 
 @pytest.mark.parametrize("case", params(FACTS))
 def test_fact(case):
