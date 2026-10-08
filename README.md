@@ -83,3 +83,5 @@ Append an object to `cases/facts.json` or `cases/triage.json`. No Python changes
 - HTTP 5xx and 429 responses are not retried yet; only connection errors and timeouts are.
 - Exact-match assertions after light normalisation suit short factual answers. They do not suit open-ended text.
 - No LLM-as-judge or human-labelled dataset in this repo.
+- sql-error: fails on llama3.2:3b (6/6), passes on llama3.1:8b (2/2)
+- the 3B's 6/6 was at temperature 0.0, so those runs aren't independent samples.

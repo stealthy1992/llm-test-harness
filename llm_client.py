@@ -1,6 +1,7 @@
 import functools
 import json
 import logging
+import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -13,7 +14,7 @@ log = logging.getLogger(__name__)
 RETRYABLE = (requests.exceptions.ConnectionError, requests.exceptions.Timeout)
 
 OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL = "llama3.2:3b"
+MODEL = os.environ.get("LLM_MODEL", "llama3.2:3b")
 RUNS_DIR = Path("runs")
 
 
